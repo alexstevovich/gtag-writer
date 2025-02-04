@@ -32,4 +32,5 @@ Thumbs.db
 # Ignore generated documentation
 /tar
 
+#My Tools
 push-to-remotes.bat

@@ -5,7 +5,7 @@
  * @param {string} trackingId - Your Google Tag ID (e.g., "G-XXXXXXXXXX")
  * @returns {string} - The complete Google Tag script block
  */
-function writeGoogleTagBlock(trackingId) {
+export function writeGoogleTagBlock(trackingId) {
     if (!trackingId || typeof trackingId !== "string") {
         throw new Error("❌ Missing or invalid tracking ID. Provide a valid Google Tag ID.");
     }
@@ -21,4 +21,4 @@ function writeGoogleTagBlock(trackingId) {
 </script>`.trim();
 }
 
-module.exports = { writeGoogleTagBlock };
+export default { writeGoogleTagBlock };
