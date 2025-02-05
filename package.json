@@ -1,24 +1,23 @@
 {
-  "name": "googletag-writer",
+  "name": "gtag-writer",
   "version": "1.0.0",
   "description": "A simple Node.js utility to write Google Tag (gtag.js) script blocks.",
-  "main": "src/google-tag-writer.js",
-  "types": "src/google-tag-writer.ts",
-  "module": "src/google-tag-writer.js",
+  "main": "src/gtag-writer.mjs",
+  "types": "src/gtag-writer.d.ts",
+  "module": "src/gtag-writer.mjs",
   "type": "module",
   "exports": {
-    "import": "./src/google-tag-writer.js",
-    "require": "./src/google-tag-writer.cjs"
+    "import": "./src/gtag-writer.mjs",
+    "require": "./src/gtag-writer.cjs"
   },
   "dependencies": {
-    "js-yaml": "^4.1.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alexstevovich/googletag-writer-node.git"
+    "url": "https://github.com/alexstevovich/gtag-writer.git"
   },
   "keywords": ["google", "gtag", "google tag", "analytics", "gtag.js", "google tag writer"],
   "author": "Alex Stevovich",
   "license": "MIT",
-  "files": ["src/", "index.d.ts"]
+  "files": ["src/"]
 }

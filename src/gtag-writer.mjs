@@ -1,5 +1,5 @@
 /**
- * googletag-writer
+ * gtag-writer
  * Generates the script tag for Google Tag Manager (gtag.js)
  *
  * @param {string} trackingId - Your Google Tag ID (e.g., "G-XXXXXXXXXX")

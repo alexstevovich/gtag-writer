@@ -1,4 +1,4 @@
-declare module "googletag-writer" {
+declare module "gtag-writer" {
     /**
      * Generates the Google Tag (gtag.js) script block.
      * @param trackingId - Your Google Tag ID (e.g., "G-XXXXXXXXXX").
