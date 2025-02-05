@@ -1,6 +1,6 @@
-# googletag-writer
+# gtag-writer
 
-`googletag-writer` is a simple Node.js utility for writing Google Tag (`gtag.js`) script blocks dynamically.
+`gtag-writer` is a minimal Node.js utility for writing Google Tag (`gtag.js`) script blocks dynamically.
 
 ## Features
 - Lightweight – No dependencies, just pure JavaScript.
@@ -11,20 +11,20 @@
 ## Installation
 Install via NPM:
 ```sh
-npm install googletag-writer
+npm install gtag-writer
 ```
 Or via Yarn:
 ```sh
-yarn add googletag-writer
+yarn add gtag-writer
 ```
 
 ## Usage
 ### Basic Example
 ```javascript
-const { writeGoogleTagBlock } = require("googletag-writer");
+const { write } = require("gtag-writer");
 
 const trackingId = "G-XXXXXXXXXX";
-console.log(writeGoogleTagBlock(trackingId));
+console.log(write(trackingId));
 ```
 ### Output:
 ```html
@@ -39,7 +39,7 @@ console.log(writeGoogleTagBlock(trackingId));
 ```
 
 ## API Reference
-### `writeGoogleTagBlock(trackingId: string) -> string`
+### `write(trackingId: string) -> string`
 Generates a Google Tag script block for the provided tracking ID.
 
 | Parameter    | Type     | Description                                      |
@@ -51,8 +51,8 @@ Throws an error if `trackingId` is missing or invalid.
 ## TypeScript Support
 For TypeScript users, this package includes type definitions in `index.d.ts`:
 ```typescript
-declare module "googletag-writer" {
-    export function writeGoogleTagBlock(trackingId: string): string;
+declare module "gtag-writer" {
+    export function write(trackingId: string): string;
 }
 ```
 No extra setup is required.

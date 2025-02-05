@@ -3,14 +3,16 @@
  * Generates the script tag for Google Tag Manager (gtag.js)
  *
  * @param {string} trackingId - Your Google Tag ID (e.g., "G-XXXXXXXXXX")
- * @returns {string} - The complete Google Tag script block
+ * @param {Object} [options] - Configuration options.
+ * @param {boolean} [options.minify=false] - Whether to generate a minified version.
+ * @returns {string} - The complete Google Tag script block.
  */
-export function writeGoogleTagBlock(trackingId) {
+export function write(trackingId, { minify = false } = {}) {
     if (!trackingId || typeof trackingId !== "string") {
         throw new Error("❌ Missing or invalid tracking ID. Provide a valid Google Tag ID.");
     }
 
-    return `
+    const scriptBlock = `
 <!-- Google Tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=${trackingId}"></script>
 <script>
@@ -18,7 +20,9 @@ export function writeGoogleTagBlock(trackingId) {
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', '${trackingId}');
-</script>`.trim();
+</script>`;
+
+    return minify ? scriptBlock.replace(/\s+/g, " ") : scriptBlock.trim();
 }
 
-export default { writeGoogleTagBlock };
+export default { write };
